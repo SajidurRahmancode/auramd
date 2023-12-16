@@ -33,7 +33,7 @@ if (mysqli_num_rows($result) === 1) {
       header("Location: journalist.html");
       exit;
     case 'unambassador':
-      header("Location: UNAMB.html");
+      header("Location: UNAMB.php");
       exit;
     case 'educationalinstitute':
       header("Location: Educational_Institute.php");

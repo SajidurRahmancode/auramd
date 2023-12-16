@@ -4,7 +4,7 @@ if(isset($_GET['id'])){
     $id = $_GET['id'];   
 }
 
-$servername = "localhost";
+$servername = "localhost:4306";
 $username = "root";
 $password = "";
 $dbname = "rtcf";
