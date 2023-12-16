@@ -1,5 +1,5 @@
 <?php
-$server = "localhost";
+$server = "localhost:4306";
 $username = "root";
 $password = "";
 $database = "rtcf";
