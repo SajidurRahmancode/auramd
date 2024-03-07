@@ -1,8 +1,8 @@
 <?php
-$server = "localhost:4306";
+$server = "localhost";
 $username = "root";
 $password = "";
-$database = "rtcf";
+$database = "Electronic-Health-Records-systems";
 
 $conn = mysqli_connect($server, $username, $password, $database);
 if (!$conn){
