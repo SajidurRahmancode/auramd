@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "Electronic-Health-Records-systems";
+$dbname = "auramd";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -119,6 +119,12 @@ $conn->close();
                             <a href="side-menu-light-post.html" class="side-menu">
                                 <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
                                 <div class="side-menu__title"> Post </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="side-menu-light-post.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
+                                <div class="side-menu__title"> Graph </div>
                             </a>
                         </li>
                      
