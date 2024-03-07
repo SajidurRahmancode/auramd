@@ -19,13 +19,13 @@ session_start();
     
     <div class="cover">
       <div class="front">
-        <img src="dist/images/frontImg.jpg" alt="">
         
+        <img src="dist/images/design.jpg" alt="">
+        
+        </div>
         
       </div>
-      
-    </div>
-    <div class="forms">
+      <div class="forms">
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
