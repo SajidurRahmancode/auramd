@@ -84,6 +84,12 @@
                                 <div class="side-menu__title"> Post </div>
                             </a>
                         </li>
+                        <li>
+                            <a href="graph.php" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
+                                <div class="side-menu__title">graph</div>
+                            </a>
+                        </li>
                      
 
 
