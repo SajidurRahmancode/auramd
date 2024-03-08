@@ -1,10 +1,10 @@
 <?php
 $server = "localhost";
-$username = "root";
+$user_id = "root";
 $password = "";
-$database = "Electronic-Health-Records-systems";
+$database = "auramd";
 
-$conn = mysqli_connect($server, $username, $password, $database);
+$conn = mysqli_connect($server, $user_id, $password, $database);
 if (!$conn){
 //     echo "success";
 // }

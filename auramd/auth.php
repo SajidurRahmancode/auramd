@@ -7,13 +7,13 @@ if (!isset($_POST['submit'])) {
   exit;
 }
 
-$conn = mysqli_connect('localhost:4306', 'root', '', 'Electronic-Health-Records-systems');
+$conn = mysqli_connect('localhost', 'root', '', 'auramd');
 
-$username = mysqli_real_escape_string($conn, $_POST['username']);
+$user_id = mysqli_real_escape_string($conn, $_POST['user_id']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 
 // Use prepared statements for secure query with user type
-$stmt = mysqli_prepare($conn, "SELECT * FROM users WHERE username='$username' AND password='$password' AND user_type = ?");
+$stmt = mysqli_prepare($conn, "SELECT * FROM user_t WHERE user_id='$user_id' AND password='$password' AND user_type = ?");
 mysqli_stmt_bind_param($stmt, "s", $_POST['user']);
 mysqli_stmt_execute($stmt);
 
@@ -22,35 +22,35 @@ $result = mysqli_stmt_get_result($stmt);
 // Check if query was successful and returned a single result
 if (mysqli_num_rows($result) === 1) {
   $row = mysqli_fetch_assoc($result);
-  $userType = $row['user_type'];
+  $user_type = $row['user_type'];
 
   // Redirect based on user type
-  switch ($userType) {
+  switch ($user_type) {
     case 'admin':
       header("Location: admin.php");
       exit;
       case 'SENIOR_DOCTOR':
-        header("Location:SENIOR_DOCTOR.html");
+        header("Location:SENIOR_DOCTOR.php");
         exit;
       case 'JUNIOR_DOCTOR':
-        header("Location:JUNIOR_DOCTOR.html");
+        header("Location:JUNIOR_DOCTOR.php");
         exit;
       case 'PATIENT':
-        header("Location:PATIENT.html");
+        header("Location:PATIENT.php");
         exit;
       case 'RECEPTIONIST':
-        header("Location:RECEPTIONIST.html");
+        header("Location:RECEPTIONIST.php");
         exit;
       case 'PHARMACY':
-        header("Location:PHARMACY.html");
+        header("Location:PHARMACY.php");
         exit;
       case 'Nurse':
-          header("Location:Nurse.html");
+          header("Location:Nurse.php");
           exit;  
     default:
       // Handle unexpected user type
-      error_log("Unexpected user type: " . $userType);
-      $_SESSION['login_failed'] = "Invalid user type.";
+      error_log("Unexpected user type: " . $user_type);
+      $_SESSION['login_failed'] = "Invaluser_id user type.";
       header('location: ./index.php');
       exit;
   }

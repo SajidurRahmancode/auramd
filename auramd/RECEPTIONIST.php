@@ -1,39 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "auramd";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-// Handle form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $email = $_POST['email'];
-    $address = $_POST['address'];
-    $city = $_POST['city'];
-    $state = $_POST['state'];
-    $zip = $_POST['zip'];
-    $description = $_POST['comment'];
-
-    // Insert data into the database
-    $sql = "INSERT INTO environmental_scientist(first_name, last_name, email, address, city, state, zip, description)
-            VALUES ('$first_name', '$last_name', '$email', '$address', '$city', '$state', '$zip', '$description')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Data inserted successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-}
-
-$conn->close();
-?>
-
 <!DOCTYPE html>
 
 <html lang="en" class="light">

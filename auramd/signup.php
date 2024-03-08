@@ -9,53 +9,49 @@ require_once 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // Get form data
-    $id = trim($_POST['id']);
-    $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
-    $cpassword = trim($_POST['cpassword']);
-    $name = trim($_POST['name']);
-    $user = trim($_POST['user']);
+  // Get form data
+  $user_id = trim($_POST['user_id']);
+  $email = trim($_POST['email']);
+  $password = trim($_POST['password']);
+  $cpassword = trim($_POST['cpassword']);
+  $user_type = trim($_POST['user_type']);
 
-    // Validate user input
-    // ...
+  // Validate user input
+  // ...
 
-    // Check if username exists
+  // Check if username exists
+  $stmt = $conn->prepare("SELECT * FROM user_t WHERE user_id = ?");
+  $stmt->bind_param("s", $user_id);
+  $stmt->execute();
+  $result = $stmt->get_result();
 
-    
-$stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
+  if ($result->num_rows > 0) {
+    $exists = true;
+    $showError = "User ID already exists.";
+  } else if ($password !== $cpassword) {
+    $showError = "Passwords do not match.";
+  } else {
+    // Hash password
+   // $password = password_hash($password, PASSWORD_DEFAULT);
 
-    if ($result->num_rows > 0) {
-        $exists = true;
-        $showError = "Username already exists.";
-    } else if ($password !== $cpassword) {
-        $showError = "Passwords do not match.";
+    // Insert user data
+    $stmt = $conn->prepare("INSERT INTO user_t(user_id,password,email, user_type) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $user_id, $password, $email,$user_type);
+    if (!$stmt->execute()) {
+      $showError = "Error inserting data: " . $conn->error;
     } else {
-        // Hash password
-      //  $password = password_hash($password, PASSWORD_DEFAULT);
-
-        // Insert user data
-        $stmt = $conn->prepare("INSERT INTO users (id, username, password, name, user_type) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssss", $id, $username, $password, $name, $user);
-        if (!$stmt->execute()) {
-            $showError = "Error inserting data: " . $conn->error;
-        } else {
-            $showAlert = true;
-        }
-
-        // Close prepared statements
-        $stmt->close();
+      $showAlert = true;
     }
 
-    // Close result set
+    // Close prepared statements
+    $stmt->close();
+  }
 
-    
-$result->close();
+  // Close result set
+  $result->close();
 }
 ?>
+
 	
 <!doctype html> 
 	
@@ -129,28 +125,23 @@ $result->close();
 	
 <div class="container my-4 "> 
 	
-	<h3 class="text-center">Signup here and join Us to help people reduce carbon footprint</h3> 
+	<h3 class="text-center">SIGNUP</h3> 
 	<form action="signup.php" method="post">
-  <div class="form-group"> 
-			<label for="id">id</label> 
-		<input type="text" class="form-control" id="id"
-			name="id" aria-describedby="emailHelp">	 
+  		<div class="form-group"> 
+			<label for="user_id">id</label> 
+		<input type="text" class="form-control" id="user_id"
+			name="user_id" aria-describedby="emailHelp">	 
 		</div>  
-  <div class="form-group">
-	 
-			<label for="name">name</label> 
-		<input type="text" class="form-control" id="name"
-			name="name" aria-describedby="emailHelp">	 
+		<div class="form-group"> 
+			<label for="email">email</label> 
+		<input type="text" class="form-control" id="email"
+			name="email" aria-describedby="emailHelp">	 
 		</div>  
 	
+		
 		<div class="form-group"> 
-			<label for="username">Username</label> 
-		<input type="text" class="form-control" id="username"
-			name="username" aria-describedby="emailHelp">	 
-		</div> 
-		<div class="form-group"> 
-        <label for="user">Select  a user:</label>
-        <select name="user" id="user">
+        <label for="user_type">Select  a user:</label>
+        <select name="user_type" id="user_type">
           <option value="admin">admin</option>
 		  <option value="SENIOR_DOCTOR">SENIOR_DOCTOR</option>
           <option value="JUNIOR_DOCTOR">JUNIOR_DOCTOR</option>

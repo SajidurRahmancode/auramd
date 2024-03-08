@@ -13,14 +13,14 @@ if (isset($_GET['id'])) {
 
     $id = $_GET['id'];
 
-    $sql = "DELETE FROM `users` WHERE `id`='$id'";
+    $sql = "DELETE FROM `user_t` WHERE `id`='$id'";
 
      $result = $conn->query($sql);
 
      if ($result == TRUE) {
 
         echo "Record deleted successfully!";
-        header( "refresh:2; url=./side-menu-light-users-layout-1.php" ); 
+        header( "refresh:2; url=./side-menu-light-user_t-layout-1.php" ); 
 
     }else{
 
