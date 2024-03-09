@@ -1,3 +1,39 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "rtcf";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $inst_name = $_POST['inst_name'];   
+    $survey_num =  $_POST['survey_num']; 
+  
+
+    // Insert data into the database
+    $sql = "INSERT INTO educational_institute(inst_list,survey_num)
+            VALUES (' $inst_name','$survey_num')";
+                  
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Data inserted successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+$conn->close();
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="en" class="light">
