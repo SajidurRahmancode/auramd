@@ -2,7 +2,7 @@
 $servername = "localhost:3306";
 $username = "root";
 $password = "";
-$dbname = "rtcf";
+$dbname = "auramd";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
