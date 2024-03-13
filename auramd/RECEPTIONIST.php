@@ -1,39 +1,3 @@
-<?php
-$servername = "localhost:3306";
-$username = "root";
-$password = "";
-$dbname = "auramd";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Handle form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $inst_name = $_POST['inst_name'];   
-    $survey_num =  $_POST['survey_num']; 
-  
-
-    // Insert data into the database
-    $sql = "INSERT INTO educational_institute(inst_list,survey_num)
-            VALUES (' $inst_name','$survey_num')";
-                  
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Data inserted successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-}
-
-$conn->close();
-?>
-
-
 <!DOCTYPE html>
 
 <html lang="en" class="light">
@@ -56,7 +20,7 @@ $conn->close();
         <div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
                 <a href="" class="flex mr-auto">
-                    <img alt="AuraMD" class="w-6" src="dist/images/logoo.png">
+                    <img alt="auramd" class="w-6" src="dist/images/logoo.png">
                 </a>
                 <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
             </div>
@@ -102,7 +66,7 @@ $conn->close();
             <nav class="side-nav">
                 <a href="" class="intro-x flex items-center pl-5 pt-4">
                     <img alt="" class="w-6" src="dist/images/logoo.png">
-                    <span class="hidden xl:block text-white text-lg ml-3"> AuraMD </span> 
+                    <span class="hidden xl:block text-white text-lg ml-3"> auramd </span> 
                 </a>
                 <div class="side-nav__devider my-6"></div>
                 <ul>

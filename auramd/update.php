@@ -10,14 +10,14 @@ include "db.php";
         $password = $_POST['password'];
 
 
-        $sql = "UPDATE `user_t` SET `email`='$email',`password`='$password', WHERE `user_id`='$user_id'"; 
+        $sql = "UPDATE `user_t` SET `email`='$email',`password`='$password' WHERE `user_id`='$user_id'"; 
 
         $result = $conn->query($sql); 
 
         if ($result == TRUE) {
 
             echo "Record updated successfully.";
-            header( "refresh:2; url=./view-user.php" ); 
+            header( "refresh:2; url=./users-layout.php" ); 
 
         }else{
 
@@ -31,7 +31,7 @@ if (isset($_GET['user_id'])) {
 
     $user_id = $_GET['user_id']; 
 
-    $sql = "SELECT * FROM `users` WHERE `id`='$user_id'";
+    $sql = "SELECT * FROM `user_t` WHERE `user_id`='$user_id'";
 
     $result = $conn->query($sql); 
 
@@ -41,6 +41,8 @@ if (isset($_GET['user_id'])) {
             $user_id = $row['user_id'];
             $password  = $row['password'];
             $email  = $row['email'];
+            $user_type  = $row['user_type'];
+
 
         } 
 
@@ -75,7 +77,7 @@ if (isset($_GET['user_id'])) {
 
     } else{ 
 
-        header('Location: side-menu-light-users-layout-1.php');
+        header('Location: SENIOR_DOCTOR.php');
 
     } 
 
