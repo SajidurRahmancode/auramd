@@ -26,7 +26,7 @@ session_start();
         <div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
                 <a href="" class="flex mr-auto">
-                    <img alt="Carbon" class="w-6" src="dist/images/logoo.png">
+                    <img alt="auramd" class="w-6" src="dist/images/logoo.png">
                 </a>
                 <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
             </div>
@@ -83,7 +83,7 @@ session_start();
                         </a>
                         <ul class="">
                             <li>
-                                <a href="side-menu-light-users-layout-1.php" class="menu">
+                                <a href="users-layout.php" class="menu">
                                     <div class="menu__icon"> <i data-lucide="activity"></i> </div>
                                     <div class="menu__title"> Layout 1 </div>
                                 </a>
@@ -316,7 +316,7 @@ session_start();
             <nav class="side-nav">
                 <a href="" class="intro-x flex items-center pl-5 pt-4">
                     <img alt="" class="w-6" src="dist/images/logoo.png">
-                    <span class="hidden xl:block text-white text-lg ml-3"> Carbon </span> 
+                    <span class="hidden xl:block text-white text-lg ml-3"> auramd </span> 
                 </a>
                 <div class="side-nav__devider my-6"></div>
                 <ul>
@@ -396,7 +396,7 @@ session_start();
                         </a>
                         <ul class="">
                             <li>
-                                <a href="side-menu-light-users-layout-1.php" class="side-menu">
+                                <a href="users-layout.php" class="side-menu">
                                     <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
                                     <div class="side-menu__title"> Layout 1 </div>
                                 </a>
@@ -662,28 +662,28 @@ session_start();
                                 <div class="mb-5">
                                     <a href="" class="flex items-center mt-2">
                                         <div class="w-8 h-8 image-fit">
-                                            <img alt="Carbon" class="rounded-full" src="dist/images/profile-7.jpg">
+                                            <img alt="auramd" class="rounded-full" src="dist/images/profile-7.jpg">
                                         </div>
                                         <div class="ml-3">Kevin Spacey</div>
                                         <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">kevinspacey@left4code.com</div>
                                     </a>
                                     <a href="" class="flex items-center mt-2">
                                         <div class="w-8 h-8 image-fit">
-                                            <img alt="Carbon" class="rounded-full" src="dist/images/profile-2.jpg">
+                                            <img alt="auramd" class="rounded-full" src="dist/images/profile-2.jpg">
                                         </div>
                                         <div class="ml-3">Johnny Depp</div>
                                         <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">johnnydepp@left4code.com</div>
                                     </a>
                                     <a href="" class="flex items-center mt-2">
                                         <div class="w-8 h-8 image-fit">
-                                            <img alt="Carbon" class="rounded-full" src="dist/images/profile-5.jpg">
+                                            <img alt="auramd" class="rounded-full" src="dist/images/profile-5.jpg">
                                         </div>
                                         <div class="ml-3">Johnny Depp</div>
                                         <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">johnnydepp@left4code.com</div>
                                     </a>
                                     <a href="" class="flex items-center mt-2">
                                         <div class="w-8 h-8 image-fit">
-                                            <img alt="Carbon" class="rounded-full" src="dist/images/profile-9.jpg">
+                                            <img alt="auramd" class="rounded-full" src="dist/images/profile-9.jpg">
                                         </div>
                                         <div class="ml-3">Morgan Freeman</div>
                                         <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">morganfreeman@left4code.com</div>
@@ -692,28 +692,28 @@ session_start();
                                 <div class="search-result__content__title">Products</div>
                                 <a href="" class="flex items-center mt-2">
                                     <div class="w-8 h-8 image-fit">
-                                        <img alt="Carbon" class="rounded-full" src="dist/images/preview-9.jpg">
+                                        <img alt="auramd" class="rounded-full" src="dist/images/preview-9.jpg">
                                     </div>
                                     <div class="ml-3">Oppo Find X2 Pro</div>
                                     <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">Smartphone &amp; Tablet</div>
                                 </a>
                                 <a href="" class="flex items-center mt-2">
                                     <div class="w-8 h-8 image-fit">
-                                        <img alt="Carbon" class="rounded-full" src="dist/images/preview-1.jpg">
+                                        <img alt="auramd" class="rounded-full" src="dist/images/preview-1.jpg">
                                     </div>
                                     <div class="ml-3">Nikon Z6</div>
                                     <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">Photography</div>
                                 </a>
                                 <a href="" class="flex items-center mt-2">
                                     <div class="w-8 h-8 image-fit">
-                                        <img alt="Carbon" class="rounded-full" src="dist/images/preview-2.jpg">
+                                        <img alt="auramd" class="rounded-full" src="dist/images/preview-2.jpg">
                                     </div>
                                     <div class="ml-3">Sony Master Series A9G</div>
                                     <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">Electronic</div>
                                 </a>
                                 <a href="" class="flex items-center mt-2">
                                     <div class="w-8 h-8 image-fit">
-                                        <img alt="Carbon" class="rounded-full" src="dist/images/preview-8.jpg">
+                                        <img alt="auramd" class="rounded-full" src="dist/images/preview-8.jpg">
                                     </div>
                                     <div class="ml-3">Dell XPS 13</div>
                                     <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">PC &amp; Laptop</div>
@@ -730,7 +730,7 @@ session_start();
                                 <div class="notification-content__title">Notifications</div>
                                 <div class="cursor-pointer relative flex items-center ">
                                     <div class="w-12 h-12 flex-none image-fit mr-1">
-                                        <img alt="Carbon" class="rounded-full" src="dist/images/profile-7.jpg">
+                                        <img alt="auramd" class="rounded-full" src="dist/images/profile-7.jpg">
                                         <div class="w-3 h-3 bg-success absolute right-0 bottom-0 rounded-full border-2 border-white dark:border-darkmode-600"></div>
                                     </div>
                                     <div class="ml-2 overflow-hidden">
@@ -743,7 +743,7 @@ session_start();
                                 </div>
                                 <div class="cursor-pointer relative flex items-center mt-5">
                                     <div class="w-12 h-12 flex-none image-fit mr-1">
-                                        <img alt="Carbon" class="rounded-full" src="dist/images/profile-2.jpg">
+                                        <img alt="auramd" class="rounded-full" src="dist/images/profile-2.jpg">
                                         <div class="w-3 h-3 bg-success absolute right-0 bottom-0 rounded-full border-2 border-white dark:border-darkmode-600"></div>
                                     </div>
                                     <div class="ml-2 overflow-hidden">
@@ -756,7 +756,7 @@ session_start();
                                 </div>
                                 <div class="cursor-pointer relative flex items-center mt-5">
                                     <div class="w-12 h-12 flex-none image-fit mr-1">
-                                        <img alt="Carbon" class="rounded-full" src="dist/images/profile-5.jpg">
+                                        <img alt="auramd" class="rounded-full" src="dist/images/profile-5.jpg">
                                         <div class="w-3 h-3 bg-success absolute right-0 bottom-0 rounded-full border-2 border-white dark:border-darkmode-600"></div>
                                     </div>
                                     <div class="ml-2 overflow-hidden">
@@ -769,7 +769,7 @@ session_start();
                                 </div>
                                 <div class="cursor-pointer relative flex items-center mt-5">
                                     <div class="w-12 h-12 flex-none image-fit mr-1">
-                                        <img alt="Carbon" class="rounded-full" src="dist/images/profile-9.jpg">
+                                        <img alt="auramd" class="rounded-full" src="dist/images/profile-9.jpg">
                                         <div class="w-3 h-3 bg-success absolute right-0 bottom-0 rounded-full border-2 border-white dark:border-darkmode-600"></div>
                                     </div>
                                     <div class="ml-2 overflow-hidden">
@@ -782,7 +782,7 @@ session_start();
                                 </div>
                                 <div class="cursor-pointer relative flex items-center mt-5">
                                     <div class="w-12 h-12 flex-none image-fit mr-1">
-                                        <img alt="Carbon" class="rounded-full" src="dist/images/profile-1.jpg">
+                                        <img alt="auramd" class="rounded-full" src="dist/images/profile-1.jpg">
                                         <div class="w-3 h-3 bg-success absolute right-0 bottom-0 rounded-full border-2 border-white dark:border-darkmode-600"></div>
                                     </div>
                                     <div class="ml-2 overflow-hidden">
@@ -800,7 +800,7 @@ session_start();
                     <!-- BEGIN: Account Menu -->
                     <div class="intro-x dropdown w-8 h-8">
                         <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in" role="button" aria-expanded="false" data-tw-toggle="dropdown">
-                            <img alt="Carbon" src="dist/images/profile-5.jpg">
+                            <img alt="auramd" src="dist/images/profile-5.jpg">
                         </div>
                         <div class="dropdown-menu w-56">
                             <ul class="dropdown-content bg-primary text-white">
