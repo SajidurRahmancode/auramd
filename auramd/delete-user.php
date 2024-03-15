@@ -8,7 +8,7 @@ if (isset($_GET['user_id'])) {
 
     $user_id = $_GET['user_id'];
 
-    $sql = "DELETE FROM `user_t` WHERE 'user_id'='$user_id'";
+    $sql = "DELETE FROM `user` WHERE 'user_id'='$user_id'";
 
     $result = $conn->query($sql);
 

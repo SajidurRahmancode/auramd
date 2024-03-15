@@ -8,9 +8,9 @@ session_start();
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="login-page-style.css">
+    <link rel="stylesheet" href="dist/css/login-page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="wuser_idth=device-wuser_idth, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style></style>
    </head>
@@ -31,7 +31,7 @@ session_start();
             <div class="title">Login</div>
             <?php if (isset($_SESSION['login_failed'])) : ?>
         <div class="alert">
-          Incorrect user_id or password or user type mismatch!
+          Incorrect username or password or user type mismatch!
         </div>
       <?php
         unset($_SESSION['login_failed']);
@@ -41,7 +41,7 @@ session_start();
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" name="user_id" placeholder="Enter your user_id" required>
+                <input type="text" name="username" placeholder="Enter your username" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
@@ -49,7 +49,7 @@ session_start();
               </div>
               <div class="user">
         <label for="user">Select  a user:</label>
-        <select name="user" user_id="user">
+        <select name="user" id="user">
           <option value="admin">admin</option>
 		      <option value="SENIOR_DOCTOR">SENIOR_DOCTOR</option>
           <option value="JUNIOR_DOCTOR">JUNIOR_DOCTOR</option>

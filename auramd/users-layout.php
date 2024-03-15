@@ -7,7 +7,7 @@ session_start();
 
 include "db.php";
 
-$sql = "SELECT user_id, password, email,user_type FROM user_t";
+$sql = "SELECT user_id, password, email,user_type FROM user";
 
 $result = $conn->query($sql);
 

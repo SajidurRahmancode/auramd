@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // ...
 
   // Check if username exists
-  $stmt = $conn->prepare("SELECT * FROM user_t WHERE user_id = ?");
+  $stmt = $conn->prepare("SELECT * FROM user WHERE user_id = ?");
   $stmt->bind_param("s", $user_id);
   $stmt->execute();
   $result = $stmt->get_result();
