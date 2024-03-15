@@ -13,7 +13,7 @@ $user_id = mysqli_real_escape_string($conn, $_POST['user_id']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 
 // Use prepared statements for secure query with user type
-$stmt = mysqli_prepare($conn, "SELECT * FROM user_t WHERE user_id='$user_id' AND password='$password' AND user_type = ?");
+$stmt = mysqli_prepare($conn, "SELECT * FROM user WHERE user_id='$user_id' AND password='$password' AND user_type = ?");
 mysqli_stmt_bind_param($stmt, "s", $_POST['user']);
 mysqli_stmt_execute($stmt);
 

@@ -24,7 +24,6 @@
                     <img alt="" class="w-6" src="dist/images/logoo.png">
                     <span class="hidden xl:block text-white text-lg ml-3"> auramd </span> 
                 </a>
-                <div class="side-nav__devider my-6"></div>
                 <li>
                         <a href="SENIOR_DOCTOR.php" class="side-menu side-menu--active">
                             <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
@@ -60,7 +59,6 @@
             </nav>
             <!-- END: Side Menu -->
             
-
 
 </body>
 </html>

@@ -10,7 +10,7 @@ include "db.php";
         $password = $_POST['password'];
 
 
-        $sql = "UPDATE `user_t` SET `email`='$email',`password`='$password' WHERE `user_id`='$user_id'"; 
+        $sql = "UPDATE `user` SET `email`='$email',`password`='$password' WHERE `user_id`='$user_id'"; 
 
         $result = $conn->query($sql); 
 
@@ -31,7 +31,7 @@ if (isset($_GET['user_id'])) {
 
     $user_id = $_GET['user_id']; 
 
-    $sql = "SELECT * FROM `user_t` WHERE `user_id`='$user_id'";
+    $sql = "SELECT * FROM `user` WHERE `user_id`='$user_id'";
 
     $result = $conn->query($sql); 
 
