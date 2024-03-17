@@ -1,0 +1,58 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "auramd";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $receptionistid = $_POST['receptionistid'];   
+    $admitted_patient_data =  $_POST['admitted_patient_data']; 
+    $released_patient_data =  $_POST['released_patient_data']; 
+    $appointment_schedule	 =  $_POST['appointment_schedule	']; 
+   	
+
+    // Insert data into the database
+    $sql = "INSERT INTO receptionist(receptionistid,admitted_patient_data,released_patient_data,appointment_schedule)
+            VALUES (' $receptionistid','$admitted_patient_data','$released_patient_data','$appointment_schedule')";
+                  
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Data inserted successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+$conn->close();
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The form element</h1>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+</body>
+</html>
