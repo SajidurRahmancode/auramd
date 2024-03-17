@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    // $password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert user data
-    $stmt = $conn->prepare("INSERT INTO user_t(user_id,password,email, user_type) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO user(user_id,password,email, user_type) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $user_id, $password, $email,$user_type);
     if (!$stmt->execute()) {
       $showError = "Error inserting data: " . $conn->error;
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	
 			<strong>Success!</strong> Your account is 
 			now created and you can login.
-			<form action="index.php">
+			<form action="login.php">
 				<input type="submit" value="Go to login" />
 			</form>
 		
