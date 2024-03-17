@@ -3,7 +3,7 @@
 session_start();
 
 if (!isset($_POST['submit'])) {
-  header('location: ./index.php');
+  header('location: ./login.php');
   exit;
 }
 
@@ -51,13 +51,13 @@ if (mysqli_num_rows($result) === 1) {
       // Handle unexpected user type
       error_log("Unexpected user type: " . $user_type);
       $_SESSION['login_failed'] = "Invaluser_id user type.";
-      header('location: ./index.php');
+      header('location: ./login.php');
       exit;
   }
 } else {
   // Handle unsuccessful login
   $_SESSION['login_failed'] = true; // Set login error message
-  header('location: ./index.php');
+  header('location: ./login.php');
   exit;
 }
 
