@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2024 at 03:48 PM
+-- Generation Time: Apr 02, 2024 at 06:02 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -24,25 +24,58 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `analytical_data`
+-- Table structure for table `appointment`
 --
 
-CREATE TABLE `analytical_data` (
-  `analyticaldataid` varchar(11) NOT NULL,
-  `SurgeryDate` date DEFAULT NULL,
-  `SurgerySuccessRate` int(11) DEFAULT NULL
+CREATE TABLE `appointment` (
+  `Appointment_id` varchar(55) NOT NULL,
+  `Giving_Appointment` varchar(55) DEFAULT NULL,
+  `Taking_Appointment` varchar(55) DEFAULT NULL,
+  `Appointment_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `junior_doctor`
+-- Table structure for table `bed`
 --
 
-CREATE TABLE `junior_doctor` (
-  `juniordoctorid` varchar(11) NOT NULL,
-  `surgerydate` date DEFAULT NULL,
-  `appointmenttime` date DEFAULT NULL
+CREATE TABLE `bed` (
+  `Bed_Id` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `diagnosis_report`
+--
+
+CREATE TABLE `diagnosis_report` (
+  `Diag_Id` varchar(55) NOT NULL,
+  `Diag_Date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doctor`
+--
+
+CREATE TABLE `doctor` (
+  `Doc_ID` varchar(55) NOT NULL,
+  `Doc_name` varchar(55) DEFAULT NULL,
+  `Doc_Exp` varchar(55) DEFAULT NULL,
+  `Doc_contact` varchar(55) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nonresident`
+--
+
+CREATE TABLE `nonresident` (
+  `Npatientid` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -52,10 +85,8 @@ CREATE TABLE `junior_doctor` (
 --
 
 CREATE TABLE `nurse` (
-  `NurseID` varchar(11) NOT NULL,
-  `Nurse_name` varchar(10) NOT NULL,
-  `Contact_no` int(11) DEFAULT NULL,
-  `experience` int(11) DEFAULT NULL
+  `Nurse_Id` varchar(55) NOT NULL,
+  `Nurse_Name` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -65,146 +96,104 @@ CREATE TABLE `nurse` (
 --
 
 CREATE TABLE `patient` (
-  `PatientID` varchar(11) NOT NULL,
-  `patientname` varchar(50) NOT NULL,
-  `InsuranceInformation` varchar(50) NOT NULL,
-  `medicineid` int(11) DEFAULT NULL
+  `Patient_id` varchar(55) NOT NULL,
+  `Pat_name` varchar(55) DEFAULT NULL,
+  `Pat_address` varchar(55) DEFAULT NULL,
+  `Medical_History` varchar(55) DEFAULT NULL,
+  `Patient_type` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pharmacy`
+-- Table structure for table `prescription`
 --
 
-CREATE TABLE `pharmacy` (
-  `pharmacyid` varchar(11) NOT NULL,
-  `pharmacyname` varchar(50) NOT NULL,
-  `location` varchar(50) NOT NULL
+CREATE TABLE `prescription` (
+  `Pres_id` varchar(55) NOT NULL,
+  `Pres_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `receptionist`
+-- Table structure for table `resident`
 --
 
-CREATE TABLE `receptionist` (
-  `receptionistid` varchar(11) NOT NULL,
-  `admitted_patient_data` varchar(50) NOT NULL,
-  `released_patient_data` varchar(50) NOT NULL,
-  `appointment_schedule` date DEFAULT NULL
+CREATE TABLE `resident` (
+  `RPatient_id` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `senior_doctor`
---
-
-CREATE TABLE `senior_doctor` (
-  `seniordoctorid` varchar(11) DEFAULT NULL,
-  `surgerydate` varchar(11) DEFAULT NULL,
-  `appointmenttime` datetime DEFAULT NULL,
-  `researchdataid` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `user_id` varchar(11) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `user_type` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`user_id`, `password`, `email`, `user_type`) VALUES
-('0', '12345678', 'ra66005dgtfg9@gmail.com', 'admin'),
-('2120352', '2120352', '2120352', 'SENIOR_DOCTOR'),
-('2120353', '2120353', '2120353', 'admin');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `analytical_data`
+-- Indexes for table `appointment`
 --
-ALTER TABLE `analytical_data`
-  ADD PRIMARY KEY (`analyticaldataid`);
+ALTER TABLE `appointment`
+  ADD PRIMARY KEY (`Appointment_id`),
+  ADD KEY `Giving_Appointment` (`Giving_Appointment`),
+  ADD KEY `Taking_Appointment` (`Taking_Appointment`);
 
 --
--- Indexes for table `junior_doctor`
+-- Indexes for table `bed`
 --
-ALTER TABLE `junior_doctor`
-  ADD PRIMARY KEY (`juniordoctorid`);
+ALTER TABLE `bed`
+  ADD PRIMARY KEY (`Bed_Id`);
+
+--
+-- Indexes for table `diagnosis_report`
+--
+ALTER TABLE `diagnosis_report`
+  ADD PRIMARY KEY (`Diag_Id`);
+
+--
+-- Indexes for table `doctor`
+--
+ALTER TABLE `doctor`
+  ADD PRIMARY KEY (`Doc_ID`);
+
+--
+-- Indexes for table `nonresident`
+--
+ALTER TABLE `nonresident`
+  ADD PRIMARY KEY (`Npatientid`);
 
 --
 -- Indexes for table `nurse`
 --
 ALTER TABLE `nurse`
-  ADD PRIMARY KEY (`NurseID`);
+  ADD PRIMARY KEY (`Nurse_Id`);
 
 --
 -- Indexes for table `patient`
 --
 ALTER TABLE `patient`
-  ADD PRIMARY KEY (`PatientID`),
-  ADD KEY `medicineid` (`medicineid`);
+  ADD PRIMARY KEY (`Patient_id`);
 
 --
--- Indexes for table `pharmacy`
+-- Indexes for table `prescription`
 --
-ALTER TABLE `pharmacy`
-  ADD PRIMARY KEY (`pharmacyid`);
+ALTER TABLE `prescription`
+  ADD PRIMARY KEY (`Pres_id`);
 
 --
--- Indexes for table `receptionist`
+-- Indexes for table `resident`
 --
-ALTER TABLE `receptionist`
-  ADD PRIMARY KEY (`receptionistid`);
-
---
--- Indexes for table `senior_doctor`
---
-ALTER TABLE `senior_doctor`
-  ADD KEY `seniordoctorid` (`seniordoctorid`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`user_id`);
+ALTER TABLE `resident`
+  ADD PRIMARY KEY (`RPatient_id`);
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `junior_doctor`
+-- Constraints for table `appointment`
 --
-ALTER TABLE `junior_doctor`
-  ADD CONSTRAINT `junior_doctor_ibfk_1` FOREIGN KEY (`juniordoctorid`) REFERENCES `user` (`user_id`);
-
---
--- Constraints for table `patient`
---
-ALTER TABLE `patient`
-  ADD CONSTRAINT `patient_ibfk_1` FOREIGN KEY (`medicineid`) REFERENCES `medicines_t` (`medicineid`);
-
---
--- Constraints for table `senior_doctor`
---
-ALTER TABLE `senior_doctor`
-  ADD CONSTRAINT `senior_doctor_ibfk_1` FOREIGN KEY (`seniordoctorid`) REFERENCES `user` (`user_id`);
+ALTER TABLE `appointment`
+  ADD CONSTRAINT `appointment_ibfk_1` FOREIGN KEY (`Giving_Appointment`) REFERENCES `doctor` (`Doc_ID`),
+  ADD CONSTRAINT `appointment_ibfk_2` FOREIGN KEY (`Taking_Appointment`) REFERENCES `patient` (`Patient_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
