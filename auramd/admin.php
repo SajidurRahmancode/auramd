@@ -10,7 +10,7 @@ session_start();
     <!-- BEGIN: Head -->
     <head>
         <meta charset="utf-8">
-        <link href="dist/images/logoo.png" rel="shortcut icon">
+        <link href="dist/dist/images/logoo.png" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -26,7 +26,7 @@ session_start();
         <div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
                 <a href="" class="flex mr-auto">
-                    <img alt="auramd" class="w-6" src="dist/images/logoo.png">
+                    <img alt="auramd" class="w-6" src="dist/dist/images/logoo.png">
                 </a>
                 <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
             </div>
@@ -315,7 +315,7 @@ session_start();
             <!-- BEGIN: Side Menu -->
             <nav class="side-nav">
                 <a href="" class="intro-x flex items-center pl-5 pt-4">
-                    <img alt="" class="w-6" src="dist/images/logoo.png">
+                    <img alt="" class="w-6" src="dist/dist/images/logoo.png">
                     <span class="hidden xl:block text-white text-lg ml-3"> auramd </span> 
                 </a>
                 <div class="side-nav__devider my-6"></div>
