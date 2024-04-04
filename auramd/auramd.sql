@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2024 at 06:02 PM
+-- Generation Time: Apr 04, 2024 at 06:22 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -71,6 +71,17 @@ CREATE TABLE `doctor` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `duty`
+--
+
+CREATE TABLE `duty` (
+  `Doc_id` varchar(11) NOT NULL,
+  `Bed_id` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `nonresident`
 --
 
@@ -106,6 +117,17 @@ CREATE TABLE `patient` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `prescribemedicine`
+--
+
+CREATE TABLE `prescribemedicine` (
+  `Pres_id` varchar(11) NOT NULL,
+  `Medicine` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `prescription`
 --
 
@@ -117,11 +139,44 @@ CREATE TABLE `prescription` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `prescriptionadvice`
+--
+
+CREATE TABLE `prescriptionadvice` (
+  `Pres_id` varchar(11) NOT NULL,
+  `Advice` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `resident`
 --
 
 CREATE TABLE `resident` (
   `RPatient_id` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `takingappointments`
+--
+
+CREATE TABLE `takingappointments` (
+  `Doc_id` varchar(11) NOT NULL,
+  `RPatient_id` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `typeofpatient`
+--
+
+CREATE TABLE `typeofpatient` (
+  `Patientid` varchar(11) NOT NULL,
+  `Patient_Type` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -155,6 +210,12 @@ ALTER TABLE `doctor`
   ADD PRIMARY KEY (`Doc_ID`);
 
 --
+-- Indexes for table `duty`
+--
+ALTER TABLE `duty`
+  ADD PRIMARY KEY (`Doc_id`,`Bed_id`);
+
+--
 -- Indexes for table `nonresident`
 --
 ALTER TABLE `nonresident`
@@ -173,16 +234,40 @@ ALTER TABLE `patient`
   ADD PRIMARY KEY (`Patient_id`);
 
 --
+-- Indexes for table `prescribemedicine`
+--
+ALTER TABLE `prescribemedicine`
+  ADD PRIMARY KEY (`Pres_id`,`Medicine`);
+
+--
 -- Indexes for table `prescription`
 --
 ALTER TABLE `prescription`
   ADD PRIMARY KEY (`Pres_id`);
 
 --
+-- Indexes for table `prescriptionadvice`
+--
+ALTER TABLE `prescriptionadvice`
+  ADD PRIMARY KEY (`Pres_id`,`Advice`);
+
+--
 -- Indexes for table `resident`
 --
 ALTER TABLE `resident`
   ADD PRIMARY KEY (`RPatient_id`);
+
+--
+-- Indexes for table `takingappointments`
+--
+ALTER TABLE `takingappointments`
+  ADD PRIMARY KEY (`Doc_id`,`RPatient_id`);
+
+--
+-- Indexes for table `typeofpatient`
+--
+ALTER TABLE `typeofpatient`
+  ADD PRIMARY KEY (`Patientid`,`Patient_Type`);
 
 --
 -- Constraints for dumped tables
