@@ -1045,7 +1045,7 @@ select{
     --tw-border-opacity: 1;
     border-color: rgb(var(--color-slate-100) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .btn-secondary:hover:not(:disabled){
     border-color: rgb(var(--color-darkmode-300) / 0.8);
@@ -1153,7 +1153,7 @@ select{
     --tw-border-opacity: 1;
     border-color: rgb(var(--color-slate-100) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .btn-elevated-secondary:hover:not(:disabled){
     border-color: rgb(var(--color-darkmode-300) / 0.8);
@@ -1292,7 +1292,7 @@ select{
     --tw-border-opacity: 1;
     border-color: rgb(var(--color-slate-100) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .btn-rounded-secondary:hover:not(:disabled){
     border-color: rgb(var(--color-darkmode-300) / 0.8);
@@ -1419,7 +1419,7 @@ select{
     --tw-border-opacity: 1;
     border-color: rgb(var(--color-slate-100) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .btn-elevated-rounded-secondary:hover:not(:disabled){
     border-color: rgb(var(--color-darkmode-300) / 0.8);
@@ -1987,7 +1987,7 @@ select{
 .form-check-input[type="radio"]:disabled:not(:checked){
     cursor: not-allowed;
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .form-check-input[type="radio"]:disabled:not(:checked){
     background-color: rgb(var(--color-darkmode-800) / 0.5);
@@ -2034,7 +2034,7 @@ select{
 .form-check-input[type="checkbox"]:disabled:not(:checked){
     cursor: not-allowed;
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .form-check-input[type="checkbox"]:disabled:not(:checked){
     background-color: rgb(var(--color-darkmode-800) / 0.5);
@@ -2141,7 +2141,7 @@ select{
 .form-control:disabled, .form-control[readonly]{
     cursor: not-allowed;
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .form-control:disabled, .dark .form-control[readonly]{
     border-color: transparent;
@@ -2233,7 +2233,7 @@ select{
 .form-select:disabled, .form-select[readonly]{
     cursor: not-allowed;
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .form-select:disabled, .dark .form-select[readonly]{
     background-color: rgb(var(--color-darkmode-800) / 0.5);
@@ -2273,7 +2273,7 @@ select{
     --tw-border-opacity: 1;
     border-color: rgb(var(--color-slate-200) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0.75rem;
@@ -2606,7 +2606,7 @@ select{
 }
 .nav.nav-tabs .nav-item .nav-link:hover:not(.disabled):not(.active):hover{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .nav.nav-tabs .nav-item .nav-link:hover:not(.disabled):not(.active):hover{
     border-color: transparent;
@@ -3699,7 +3699,7 @@ select{
 }
 .bg-slate-100{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .bg-white\/20{
     background-color: rgb(255 255 255 / 0.2);
@@ -7949,7 +7949,7 @@ select{
 }
 .table.table-hover tr:hover td{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .table.table-hover tr:hover td{
     background-color: rgb(var(--color-darkmode-300) / var(--tw-bg-opacity));
@@ -7957,7 +7957,7 @@ select{
 }
 .table.table-striped tr:nth-of-type(odd) td{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .table.table-striped tr:nth-of-type(odd) td{
     background-color: rgb(var(--color-darkmode-300) / var(--tw-bg-opacity));
@@ -10378,7 +10378,7 @@ html body{
             height: 100%;
             width: 100%;
             --tw-bg-opacity: 1;
-            background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+            background-color: #FFFFFF;
             opacity: 0;
         }
 .dark .report-box-3.report-box-3--content:before{
@@ -10429,7 +10429,7 @@ html body{
         display: none;
         height: 100%;
         --tw-bg-opacity: 1;
-        background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+        background-color: #FFFFFF;
         opacity: 0;
     }
 .dark .report-box-4:before{
@@ -10469,7 +10469,7 @@ html body{
     min-width: 0px;
     flex: 1 1 0%;
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #ffffff;
     padding-bottom: 2.5rem;
 }
 .dark .content{
@@ -11945,7 +11945,7 @@ html body{
   }
 .top-nav > ul li .top-menu.top-menu--active{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .top-nav > ul li .top-menu.top-menu--active{
     --tw-bg-opacity: 1;
@@ -15237,7 +15237,7 @@ html body{
 }
 .side-nav > ul > li > .side-menu.side-menu--active{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .dark .side-nav > ul > li > .side-menu.side-menu--active{
     --tw-bg-opacity: 1;
@@ -15287,7 +15287,7 @@ html body{
                             height: 100%;
                             width: 3rem;
                             --tw-bg-opacity: 1;
-                            background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+                            background-color: #FFFFFF;
                         }
 .dark .side-nav > ul > li > .side-menu.side-menu--active .side-menu__icon:before{
     --tw-bg-opacity: 1;
@@ -15981,7 +15981,7 @@ html body{
 }
 .litepicker .container__months .month-item-header .button-previous-month:hover{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .litepicker .container__months .month-item-header .button-previous-month svg {
                     transform: rotate(135deg);
@@ -15996,7 +15996,7 @@ html body{
 }
 .litepicker .container__months .month-item-header .button-next-month:hover{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .litepicker .container__months .month-item-header .button-next-month svg {
                     transform: rotate(-45deg);
@@ -16045,7 +16045,7 @@ html body{
 }
 .litepicker .container__days .day-item:hover{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
     --tw-text-opacity: 1;
     color: rgb(var(--color-slate-800) / var(--tw-text-opacity));
     --tw-shadow: 0 0 #0000;
@@ -16065,7 +16065,7 @@ html body{
 }
 .litepicker .container__days .day-item.is-in-range, .litepicker .container__days .day-item.is-in-range:hover{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .litepicker .container__days .week-number{
     --tw-text-opacity: 1;
@@ -16315,7 +16315,7 @@ html body{
 }
 .tabulator .tabulator-header .tabulator-headers .tabulator-col:hover{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .tabulator .tabulator-header .tabulator-headers .tabulator-col .tabulator-col-content{
     padding-left: 1.25rem;
@@ -16350,7 +16350,7 @@ html body{
 }
 .tabulator .tabulator-row.tabulator-row-even{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .tabulator .tabulator-row .tabulator-cell{
     border-right-width: 0px;
@@ -16505,12 +16505,12 @@ html body{
 }
 .tabulator .tabulator-footer .tabulator-paginator .tabulator-page.active{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
     font-weight: 500;
 }
 .tabulator .tabulator-footer .tabulator-paginator .tabulator-page.active:hover{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .tabulator .tabulator-footer .tabulator-paginator .tabulator-page[data-page="first"], .tabulator .tabulator-footer .tabulator-paginator .tabulator-page[data-page="prev"], .tabulator .tabulator-footer .tabulator-paginator .tabulator-page[data-page="next"], .tabulator .tabulator-footer .tabulator-paginator .tabulator-page[data-page="last"]{
     width: 1.25rem;
@@ -16750,7 +16750,7 @@ html body{
     --tw-border-opacity: 1;
     border-color: rgb(var(--color-slate-200) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
 }
@@ -16878,7 +16878,7 @@ html body{
         border: 0;
         border-radius: 0;
         --tw-bg-opacity: 1;
-        background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+        background-color: #FFFFFF;
     }
 .document-editor .document-editor__toolbar .ck-toolbar .ck-icon {
             width: 16px;
@@ -16887,7 +16887,7 @@ html body{
         overflow-y: scroll;
         padding: calc(2 * var(--ck-spacing-large));
         --tw-bg-opacity: 1;
-        background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+        background-color: #FFFFFF;
     }
 .document-editor .document-editor__editable-container .ck-editor__editable {
         width: 15.8cm;
@@ -17026,7 +17026,7 @@ html body{
     --tw-border-opacity: 1;
     border-color: rgb(var(--color-slate-200) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .ck .ck.ck-toolbar .ck-icon, .ck .ck.ck-balloon-panel .ck-icon{
     width: 16px;
@@ -17208,7 +17208,7 @@ html body{
             }
 .source-preview{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.625rem;
@@ -17218,7 +17218,7 @@ html body{
     margin-top: -20px;
     margin-bottom: -40px;
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
     font-size: 0.75rem;
     line-height: 1rem;
     line-height: 1.625;
@@ -17621,7 +17621,7 @@ html body{
 .before\:bg-slate-100::before{
     content: var(--tw-content);
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .before\:bg-black::before{
     content: var(--tw-content);
@@ -17699,7 +17699,7 @@ html body{
 }
 .hover\:bg-slate-100:hover{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    background-color: #FFFFFF;
 }
 .hover\:bg-white\/5:hover{
     background-color: rgb(255 255 255 / 0.05);

@@ -118,7 +118,7 @@ a:focus {
 }
 
 .navbar-brand {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding: 15px 35px;
 }
 
@@ -170,7 +170,7 @@ a:focus {
   display: block;
   width: 35px;
   height: 4px;
-  background-color: #ffffff;
+ background-color: #ffffff; 
   margin: 7px 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -928,7 +928,7 @@ a:focus {
 
 .info_section .info_top .info_logo a {
   display: block;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding: 20px 35px;
 }
 

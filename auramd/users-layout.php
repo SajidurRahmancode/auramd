@@ -25,7 +25,7 @@ $result = $conn->query($sql);
     <!-- BEGIN: Head -->
     <head>
         <meta charset="utf-8">
-        <link href="dist/images/logoo.png" rel="shortcut icon">
+        <link href="dist/dist/images/logoo.png" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
  -->
