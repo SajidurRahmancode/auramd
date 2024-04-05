@@ -14,13 +14,13 @@ if ($conn->connect_error) {
 
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $inst_name = $_POST['inst_name'];   
-    $survey_num =  $_POST['survey_num']; 
+    $NurseID = $_POST['NurseID'];   
+    $Nurse_name=  $_POST['Nurse_name']; 
   
 
     // Insert data into the database
-    $sql = "INSERT INTO educational_institute(inst_list,survey_num)
-            VALUES (' $inst_name','$survey_num')";
+    $sql = "INSERT INTO Nurse(NurseID,Nurse_name)
+            VALUES (' $NurseID','$Nurse_name')";
                   
 
     if ($conn->query($sql) === TRUE) {
@@ -116,6 +116,12 @@ $conn->close();
                             <a href="side-menu-light-post.html" class="side-menu">
                                 <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
                                 <div class="side-menu__title"> Post </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Nurse_form.php" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
+                                <div class="side-menu__title"> form </div>
                             </a>
                         </li>
                      
