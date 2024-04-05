@@ -124,6 +124,13 @@ $conn->close();
                                 <div class="side-menu__title"> form </div>
                             </a>
                         </li>
+                        <li>
+                            <a href="nurse_information.php" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
+                                <div class="side-menu__title"> Nurse Information </div>
+                            </a>
+                        </li>
+                        
                      
 
 
