@@ -1,19 +1,28 @@
 <?php
-$link = mysqli_connect("localhost", 'root', '');
+$link = mysqli_connect("localhost", "root", "");
 
-mysqli_select_db($link, 'auramd');
+mysqli_select_db($link, "auramd");
 
-// Ensure all rows are fetched, including those with empty Diseases
-$res = mysqli_query($link, "SELECT *, COALESCE(Diseases, '') AS Diseases FROM analytical_data");
+// Count the number of doctors and patients
+$doctor_count = mysqli_query($link, "SELECT COUNT(*) AS doctor_count FROM doctor");
+$patient_count = mysqli_query($link, "SELECT COUNT(*) AS patient_count FROM patient");
 
-$dataPoints = array();
-while ($row = mysqli_fetch_assoc($res)) {
-  if (!empty($row["Diseases"])) {
-    $dataPoints[] = array("y" => $row["SurgerySuccessRate"], "indexLabel" => $row["Diseases"]);
-  }
-}
+$doctor_count = mysqli_fetch_assoc($doctor_count)["doctor_count"];
+$patient_count = mysqli_fetch_assoc($patient_count)["patient_count"];
+
+$total = $doctor_count + $patient_count;
+
+// Calculate percentages for doctors and patients
+$doctor_percentage = round(($doctor_count / $total) * 100, 2);
+$patient_percentage = round(($patient_count / $total) * 100, 2);
+
+$dataPoints = array(
+  array("label" => "Doctors", "y" => $doctor_percentage),
+  array("label" => "Patients", "y" => $patient_percentage),
+);
 
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -22,14 +31,12 @@ window.onload = function() {
 
 var chart = new CanvasJS.Chart("chartContainer", {
   animationEnabled: true,
-  title:{
-    text: "Surgery Success Rate Across Diseases"
+  title: {
+    text: "Doctor vs Patient Count"
   },
   data: [{
-    type: "pie",  // Use pie chart type
-    indexLabel: "{indexLabel}",
-    startAngle: 240,
-    toolTipContent: "<b>{indexLabel}:</b> {y}%",
+    type: "pie",
+    indexLabel: "{label} ({y}%)",
     dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
   }]
 });

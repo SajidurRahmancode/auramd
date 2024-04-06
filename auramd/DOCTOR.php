@@ -261,11 +261,16 @@ $conn->close();
                     
                 </div>
                 <!-- END: Top Bar -->
-                <!-- <iframe src="graph.php" width="400" height="2000"></iframe> -->
-                <iframe src="UpdateProfile.php" width="400" height="2000"></iframe>
-
+                <!--  -->
+                
+                <div class="iframe-container">
+    <iframe src="UpdateProfile.php" width="400" height="2000"></iframe>
+    <iframe src="graph.php" width="400" height="2000"></iframe>
+</div>
             </div>
-
+            <style>.iframe-container {
+    display: flex;
+}</style>
             <!-- END: Content -->
             
         </div>
