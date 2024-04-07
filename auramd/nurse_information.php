@@ -13,13 +13,12 @@ if ($conn->connect_error) {
 }
 
 // Select data from Nurse table
-$sql = "SELECT NurseID, Nurse_name FROM Nurse";
+$sql = "SELECT 	Nurse_Id , Nurse_Name FROM nurse";
 $result = $conn->query($sql);
 
 // Close the connection after fetching the data
 $conn->close();
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,8 +51,8 @@ $conn->close();
             </tr>
             <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($row['NurseID']); ?></td>
-                    <td><?php echo htmlspecialchars($row['Nurse_name']); ?></td>
+                    <td><?php echo htmlspecialchars($row['Nurse_Id']); ?></td>
+                    <td><?php echo htmlspecialchars($row['Nurse_Name']); ?></td>
                 </tr>
             <?php endwhile; ?>
         </table>
