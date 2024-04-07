@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 06, 2024 at 02:34 PM
+-- Generation Time: Apr 07, 2024 at 07:53 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -68,6 +68,14 @@ CREATE TABLE `doctor` (
   `Doc_contact` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `doctor`
+--
+
+INSERT INTO `doctor` (`Doc_ID`, `Doc_name`, `Doc_Exp`, `Doc_contact`) VALUES
+('211111', 'Sajid', 'M.D.', '0112929392'),
+('2120352', 'meow', 'MBBS', '1234567890');
+
 -- --------------------------------------------------------
 
 --
@@ -102,6 +110,13 @@ CREATE TABLE `patient` (
   `Medical_History` varchar(55) DEFAULT NULL,
   `Patient_type` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `patient`
+--
+
+INSERT INTO `patient` (`Patient_id`, `Pat_name`, `Pat_address`, `Medical_History`, `Patient_type`) VALUES
+('211111', 'Newaz', 'dhaka,bangladesh', 'Diabetes', 'r');
 
 -- --------------------------------------------------------
 
