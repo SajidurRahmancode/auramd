@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2024 at 07:53 PM
+-- Generation Time: Apr 08, 2024 at 08:26 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `appointment` (
   `Appointment_id` varchar(55) NOT NULL,
-  `Giving_Appointment` varchar(55) DEFAULT NULL,
-  `Taking_Appointment` varchar(55) DEFAULT NULL,
+  `patient_id` varchar(55) DEFAULT NULL,
+  `doctor_id` varchar(55) DEFAULT NULL,
   `Appointment_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -170,8 +170,8 @@ CREATE TABLE `resident` (
 --
 ALTER TABLE `appointment`
   ADD PRIMARY KEY (`Appointment_id`),
-  ADD KEY `Giving_Appointment` (`Giving_Appointment`),
-  ADD KEY `Taking_Appointment` (`Taking_Appointment`);
+  ADD KEY `Giving_Appointment` (`patient_id`),
+  ADD KEY `Taking_Appointment` (`doctor_id`);
 
 --
 -- Indexes for table `bed`
@@ -241,8 +241,8 @@ ALTER TABLE `resident`
 -- Constraints for table `appointment`
 --
 ALTER TABLE `appointment`
-  ADD CONSTRAINT `appointment_ibfk_1` FOREIGN KEY (`Giving_Appointment`) REFERENCES `doctor` (`Doc_ID`),
-  ADD CONSTRAINT `appointment_ibfk_2` FOREIGN KEY (`Taking_Appointment`) REFERENCES `patient` (`Patient_id`);
+  ADD CONSTRAINT `appointment_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `doctor` (`Doc_ID`),
+  ADD CONSTRAINT `appointment_ibfk_2` FOREIGN KEY (`doctor_id`) REFERENCES `patient` (`Patient_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
