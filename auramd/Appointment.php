@@ -14,15 +14,15 @@ if ($conn->connect_error) {
 
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $receptionistid = $_POST['receptionistid'];   
-    $admitted_patient_data =  $_POST['admitted_patient_data']; 
-    $released_patient_data =  $_POST['released_patient_data']; 
-    $appointment_schedule	 =  $_POST['appointment_schedule	']; 
+    $Appointment_id = $_POST['Appointment_id'];   
+    $patient_id  =  $_POST['patient_id ']; 
+    $doctor_id =  $_POST['doctor_id']; 
+    $Appointment_date	 =  $_POST['Appointment_date']; 
    	
 
     // Insert data into the database
-    $sql = "INSERT INTO receptionist(receptionistid,admitted_patient_data,released_patient_data,appointment_schedule)
-            VALUES (' $receptionistid','$admitted_patient_data','$released_patient_data','$appointment_schedule')";
+    $sql = "INSERT INTO appointment(Appointment_id,patient_id ,doctor_id,Appointment_date)
+            VALUES (' $Appointment_id','$patient_id ','$doctor_id','$Appointment_date')";
                   
 
     if ($conn->query($sql) === TRUE) {
@@ -123,7 +123,7 @@ $conn->close();
                         <li>
                             <a href="Form.php" class="side-menu">
                                 <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
-                                <div class="side-menu__title"> Form </div>
+                                <div class="side-menu__title"> Set Appointment </div>
                             </a>
                         </li>
                      

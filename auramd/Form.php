@@ -14,15 +14,15 @@ if ($conn->connect_error) {
 
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $receptionistid = $_POST['receptionistid'];   
-    $admitted_patient_data =  $_POST['admitted_patient_data']; 
-    $released_patient_data =  $_POST['released_patient_data']; 
-    $appointment_schedule =  $_POST['appointment_schedule	']; 
+    $Appointment_id  = $_POST['Appointment_id'];   
+    $patient_id   =  $_POST['patient_id']; 
+    $doctor_id =  $_POST['doctor_id']; 
+    $Appointment_date =  $_POST['Appointment_date']; 
    	
 
     // Insert data into the database
-    $sql = "INSERT INTO receptionist(receptionistid,admitted_patient_data,released_patient_data,appointment_schedule)
-            VALUES (' $receptionistid','$admitted_patient_data','$released_patient_data','$appointment_schedule')";
+    $sql = "INSERT INTO appointment(Appointment_id,patient_id,doctor_id,Appointment_date)
+            VALUES (' $Appointment_id','$patient_id','$doctor_id','$Appointment_date')";
                   
 
     if ($conn->query($sql) === TRUE) {
@@ -92,14 +92,14 @@ $conn->close();
 
 <form action="Form.php" method = "post" id = "form">
 
-  <label for="receptionistid">Reciptionist ID:</label>
-  <input type="text" id="receptionistid" name="receptionistid"><br><br>
-  <label for="admitted_patient_data">Admitted_patient_data:</label>
-  <input type="text" id="admitted_patient_data" name="admitted_patient_data"><br><br>
-  <label for="released_patient_data">Released_patient_data:</label>
-  <input type="text" id="released_patient_data" name="released_patient_data"><br><br>
-  <label for="appointment_schedule">Appointment_schedule:</label>
-  <input type="datetime-local" id="appointment_schedule" name="appointment_schedule"><br><br>
+  <label for="Appointment_id">Appointment_id:</label>
+  <input type="text" id="Appointment_id" name="Appointment_id"><br><br>
+  <label for="patient_id  ">patient_id  :</label>
+  <input type="text" id="patient_id" name="patient_id"><br><br>
+  <label for="doctor_id">doctor_id:</label>
+  <input type="text" id="doctor_id" name="doctor_id"><br><br>
+  <label for="Appointment_date">Appointment_date:</label>
+  <input type="date" id="Appointment_date" name="Appointment_date"><br><br>
 
   <input type="submit" value="Submit">
 </form>
