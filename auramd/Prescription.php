@@ -115,7 +115,7 @@ $conn->close();
                         <li>
                             <a href="side-menu-light-post.html" class="side-menu">
                                 <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
-                                <div class="side-menu__title"> Post </div>
+                                <div class="side-menu__title"> Prescription </div>
                             </a>
                         </li>
                      
