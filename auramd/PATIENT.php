@@ -118,8 +118,13 @@ $conn->close();
                                 <div class="side-menu__title"> Post </div>
                             </a>
                         </li>
-                     
-
+                        
+                        <li>
+                            <a href="patient_form.php" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
+                                <div class="side-menu__title"> Patient_form </div>
+                            </a>
+                        </li>
 
 
 
@@ -240,7 +245,16 @@ $conn->close();
                     
                 </div>
                 <!-- END: Top Bar -->
+                <div class="iframe-container">
+    <iframe src="patient_form.php" width="400" height="2000"></iframe>
+    
+
+<!--     <iframe src="nurse_information.php" width="400" height="2000"></iframe>
+ -->
+
+</div>
                 
+
             </div>
             <!-- END: Content -->
         </div>
