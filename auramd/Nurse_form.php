@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Nurse_name=  $_POST['Nurse_name']; 
   
 
-    // Insert data into the database
     $sql = "INSERT INTO nurse (Nurse_Id, Nurse_Name) 
             VALUES (' $NurseID','$Nurse_name')";
                   
@@ -39,7 +38,6 @@ $conn->close();
 <html>
 <head>
     <style>
-      /* Your CSS styles remain unchanged */
     </style>
 </head>
 <body>
