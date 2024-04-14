@@ -19,7 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
 
     // Insert data into the database
+<<<<<<< Updated upstream
     $sql = "INSERT INTO Nurse(NurseID,Nurse_name)
+=======
+    $sql = "INSERT INTO nurse (Nurse_Id, Nurse_Name) 
+>>>>>>> Stashed changes
             VALUES (' $NurseID','$Nurse_name')";
                   
 
@@ -253,9 +257,24 @@ $conn->close();
                     
                 </div>
                 <!-- END: Top Bar -->
+<<<<<<< Updated upstream
                 
             </div>
             <!-- END: Content -->
+=======
+                <div class="iframe-container">
+    <iframe src="nurse_information.php" width="400" height="2000"></iframe>
+    <iframe src="Nurse_form.php" width="400" height="2000"></iframe>
+    <iframe src="graph.php" width="400" height="2000"></iframe>
+
+</div>div>
+            <style>.iframe-container {
+    display: flex;
+}</style>
+            </div>
+            <!-- END: Content -->
+            
+>>>>>>> Stashed changes
         </div>
         <!-- BEGIN: Dark Mode Switcher-->
         
