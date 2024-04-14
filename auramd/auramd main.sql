@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2024 at 01:32 PM
+-- Generation Time: Apr 14, 2024 at 09:15 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -51,6 +51,14 @@ CREATE TABLE `bed` (
   `Bed_Id` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `bed`
+--
+
+INSERT INTO `bed` (`Bed_Id`) VALUES
+('2'),
+('3');
+
 -- --------------------------------------------------------
 
 --
@@ -59,8 +67,16 @@ CREATE TABLE `bed` (
 
 CREATE TABLE `diagnosis_report` (
   `Diag_Id` varchar(55) NOT NULL,
-  `Diag_Date` date DEFAULT NULL
+  `Diag_Date` date DEFAULT NULL,
+  `Patient_id` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `diagnosis_report`
+--
+
+INSERT INTO `diagnosis_report` (`Diag_Id`, `Diag_Date`, `Patient_id`) VALUES
+('1231212', '2024-04-25', '211111');
 
 -- --------------------------------------------------------
 
@@ -93,6 +109,14 @@ CREATE TABLE `nonresident` (
   `Npatientid` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `nonresident`
+--
+
+INSERT INTO `nonresident` (`Npatientid`) VALUES
+('2'),
+('3');
+
 -- --------------------------------------------------------
 
 --
@@ -103,6 +127,14 @@ CREATE TABLE `nurse` (
   `Nurse_Id` varchar(55) NOT NULL,
   `Nurse_Name` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `nurse`
+--
+
+INSERT INTO `nurse` (`Nurse_Id`, `Nurse_Name`) VALUES
+('3', 'Newaz'),
+('4', 'sajid');
 
 -- --------------------------------------------------------
 
@@ -137,6 +169,14 @@ CREATE TABLE `prescribemedicine` (
   `Medicine` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `prescribemedicine`
+--
+
+INSERT INTO `prescribemedicine` (`Pres_id`, `Medicine`) VALUES
+('1212', 'napa'),
+('1234', 'ENO');
+
 -- --------------------------------------------------------
 
 --
@@ -147,6 +187,15 @@ CREATE TABLE `prescription` (
   `Pres_id` varchar(55) NOT NULL,
   `Pres_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `prescription`
+--
+
+INSERT INTO `prescription` (`Pres_id`, `Pres_date`) VALUES
+('121232342', '2024-04-25'),
+('1232', '2024-04-25'),
+('1234', '2024-04-12');
 
 -- --------------------------------------------------------
 
@@ -159,6 +208,14 @@ CREATE TABLE `prescriptionadvice` (
   `Advice` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `prescriptionadvice`
+--
+
+INSERT INTO `prescriptionadvice` (`Pres_id`, `Advice`) VALUES
+('1111', 'take ENO'),
+('1212', 'take napa');
+
 -- --------------------------------------------------------
 
 --
@@ -168,6 +225,14 @@ CREATE TABLE `prescriptionadvice` (
 CREATE TABLE `resident` (
   `RPatient_id` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `resident`
+--
+
+INSERT INTO `resident` (`RPatient_id`) VALUES
+('121212'),
+('12211212');
 
 --
 -- Indexes for dumped tables
@@ -191,7 +256,8 @@ ALTER TABLE `bed`
 -- Indexes for table `diagnosis_report`
 --
 ALTER TABLE `diagnosis_report`
-  ADD PRIMARY KEY (`Diag_Id`);
+  ADD PRIMARY KEY (`Diag_Id`),
+  ADD KEY `Patient_id` (`Patient_id`);
 
 --
 -- Indexes for table `doctor`
@@ -251,6 +317,12 @@ ALTER TABLE `resident`
 ALTER TABLE `appointment`
   ADD CONSTRAINT `appointment_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`Patient_id`),
   ADD CONSTRAINT `appointment_ibfk_2` FOREIGN KEY (`doctor_id`) REFERENCES `doctor` (`Doc_ID`);
+
+--
+-- Constraints for table `diagnosis_report`
+--
+ALTER TABLE `diagnosis_report`
+  ADD CONSTRAINT `diagnosis_report_ibfk_1` FOREIGN KEY (`Patient_id`) REFERENCES `patient` (`Patient_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
