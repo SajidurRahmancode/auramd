@@ -119,13 +119,13 @@ $conn->close();
                             </a>
                         </li>
                         <li>
-                            <a href="graph.php" class="side-menu">
+                            <a href="doctor-graph.php" class="side-menu">
                                 <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
                                 <div class="side-menu__title">graph</div>
                             </a>
                         </li>
                         <li>
-                            <a href="users-layout.php" class="side-menu">
+                            <a href="DOCTORLIST.php" class="side-menu">
                                 <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
                                 <div class="side-menu__title">users</div>
                             </a>
@@ -265,12 +265,17 @@ $conn->close();
                 
                 <div class="iframe-container">
     <iframe src="UpdateProfile.php" width="400" height="2000"></iframe>
-    <iframe src="graph.php" width="400" height="2000"></iframe>
-</div>
-            </div>
+    <iframe src="doctor-graph.php" width="400" height="2000"></iframe>
+    <iframe src="DOCTORLIST.php" width="4000" height="2000"></iframe>
+
+<!--     <iframe src="nurse_information.php" width="400" height="2000"></iframe>
+ -->
+
+</div>div>
             <style>.iframe-container {
     display: flex;
 }</style>
+            </
             <!-- END: Content -->
             
         </div>
