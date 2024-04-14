@@ -14,23 +14,24 @@ if ($conn->connect_error) {
 
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $NurseID = trim($_POST['NurseID']);
-    $Nurse_name = trim($_POST['Nurse_name']);
+    $NurseID = $_POST['NurseID'];   
+    $Nurse_name=  $_POST['Nurse_name']; 
+  
 
-    // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO Nurse (NurseID, Nurse_name) VALUES (?, ?)");
-    $stmt->bind_param("ss", $NurseID, $Nurse_name);
+    // Insert data into the database
+    $sql = "INSERT INTO nurse (Nurse_Id, Nurse_Name) 
+            VALUES (' $NurseID','$Nurse_name')";
+                  
 
-    // Execute and check
-    if ($stmt->execute()) {
+    if ($conn->query($sql) === TRUE) {
         echo "Data inserted successfully";
     } else {
-        echo "Error: " . $stmt->error;
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
-    // Close statement and connection
-    $stmt->close();
 }
+
+$conn->close();
+?>
 
 $conn->close();
 ?>
