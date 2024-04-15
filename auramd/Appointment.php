@@ -248,6 +248,14 @@ $conn->close();
                     
                 </div>
                 <!-- END: Top Bar -->
+
+                <div class="iframe-container">
+    <iframe src="Appointment_Graph.php" width="400" height="2000"></iframe>
+  
+
+
+
+</div>
                 
             </div>
             <!-- END: Content -->
